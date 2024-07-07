@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.body{
+  display: flex;
+  height: calc(100vh - 72px);
+  max-width: 1281px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.heading-text{
+  height:306px;
+  width: 595px;
+  font-size: 35px;
+}
+
+* {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  max-width: 1281px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px; 
+}
+
+nav .logo {
+  height: 100%;
+  max-height: 50px;
+}
+
+nav button {
+  background-color: #D01C28;
+  color: #FFFFFF;
+  height: 25px;
+  width: 70px;
+  border: none;
+  justify-content: end;
+}
+
+.body p {
+  font-size: 15px;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.textbox-buttons {
+  display: flex;
+  gap: 10px;
+  height: 35px;
+  width: 301px;
+}
+
+.textbox-buttons button {
+  width: 150px;
+  background-color: gray;
+  color: white;
+}
+
+.sites {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.site-symbols {
+  display: flex;
+  height: 30px;
+  width: 30px; 
+  gap: 10px ;
+}
