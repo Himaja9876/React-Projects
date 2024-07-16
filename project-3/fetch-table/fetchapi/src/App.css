@@ -1,0 +1,16 @@
+.user_table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse; /* Ensures borders collapse into a single border */
+  table-layout: fixed; /* Ensures all columns have equal width */
+}
+
+.user_table th, .user_table td {
+  border: 1px solid #424141; /* Border for table cells */
+  padding: 8px; /* Padding inside cells */
+  text-align: center;
+}
+
+.user_table th {
+  background-color: #f2f2f2; /* Background color for table headers */
+}

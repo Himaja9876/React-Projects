@@ -1,0 +1,35 @@
+
+.heading {
+  margin: 71px 937px 5px 188px;
+  text-align: left;
+  
+}
+
+.heading h1{
+  font-size: 48px;
+}
+
+p {
+  margin-right: 277px;
+  margin-left: 188px;
+  width: 975px;
+  height: 72px;
+}
+
+.mainpage {
+  margin-right: 81px;
+  margin-left: 198px;
+  display: flex;
+}
+
+.support {
+  margin-top: 71.5px;
+  margin-bottom: 23px;
+}
+
+.support_buttons {
+  justify-content: space-between;
+}
+.email {
+  max-width: auto;
+}
