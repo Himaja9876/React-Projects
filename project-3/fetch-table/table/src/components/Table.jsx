@@ -1,8 +1,23 @@
+import { useEffect, useState } from "react";
 
 
 const Table = (props) => {
   const {recData} = props;
-  console.log(recData);
+
+  const [refreshedData, setRefreshedData] = useState(recData);
+
+  useEffect(() => {
+    setRefreshedData(recData);
+  }, [recData])
+
+  console.log(refreshedData);
+
+  const handleClick = (id) => {
+    const withdeletedData = refreshedData.filter((data) => (data.id !== id));
+
+    setRefreshedData(withdeletedData);
+  }
+
   return (
     <div>
       <table>
@@ -14,11 +29,16 @@ const Table = (props) => {
         </thead>
 
         <tbody>
-          {recData.map((details) => (
+          {refreshedData.map((details) => (
             <tr key = {details.id}>
               <td>{details.name}</td>
               <td>{details.username}</td>
               <td>{details.email}</td>
+              <td>
+                <button onClick={() => handleClick(details.id)}>
+                  Delete
+                </button>
+              </td>
             </tr>   
           ))} 
         </tbody>
