@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Table = (props) => {
   const {recData} = props;
@@ -6,12 +6,14 @@ const Table = (props) => {
 
   const [refresheddata, setRefresheddata] = useState(recData);
 
-  const handleDelete = () => {
-    const dataDelete= refresheddata.filter((deleteddata) => (
-      deleteddata.name === "" && deleteddata.username === "" && deleteddata.email === ""  ));
-  
-    setRefresheddata(dataDelete);  
-  }
+  useEffect(() => {
+    setRefresheddata(recData);
+  }, [recData])
+
+  const handleDelete = (id) => {
+    const dataAfterDelete = refresheddata.filter((data) => data.id !== id);
+    setRefresheddata(dataAfterDelete);
+  };
   
   return (
     <div>
@@ -32,9 +34,8 @@ const Table = (props) => {
                       <td>{details.username}</td>
                       <td>{details.email}</td>
                       <td>
-                        <button onClick={handleDelete}>Delete</button>
-                      </td>
-                      
+                        <button onClick={() => handleDelete(details.id)}>Delete</button>
+                      </td>       
                     </tr>
                   </tbody>
                   ))

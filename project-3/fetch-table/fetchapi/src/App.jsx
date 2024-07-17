@@ -32,14 +32,17 @@ function App() {
   }
 
   const filteredData = data.filter((info) => (
-    info.name.toLowerCase().includes(text.toLowerCase()) || info.username.toLowerCase().includes(text.toLowerCase()) || info.email.toLowerCase().includes(text.toLowerCase())
-  ))
+    info.name.toLowerCase().includes(text.toLowerCase()) || 
+    info.username.toLowerCase().includes(text.toLowerCase()) || 
+    info.email.toLowerCase().includes(text.toLowerCase())
+  ));
 
-  console.log(filteredData);
+  
   return (
     <div>
       <label htmlFor="name">Search: </label>
       <input type='text' id="name" value = {text} onChange={handleInput}/>
+      {console.log(filteredData)}
       {
         filteredData.length > 0 ? <Table recData = {filteredData} /> : <p>No results found</p>
       }
